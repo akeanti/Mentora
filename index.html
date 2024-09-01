@@ -3,10 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentora - Virtual School of Maths</title>
+    <meta property="og:title" content="Mentora">
+    <meta property="og:description" content="Biblio Pour les eleves 2bac sm au maroc.">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1265442511074103438/1279458142270263397/logo.png?ex=66d483c0&is=66d33240&hm=fc0e5e65ed4104ff056037ad3edbfef1f7bacaacb17da8c8276238e1e269fb77&=&format=webp&quality=lossless&width=288&height=286">
+    <meta name="theme-color" content="#88e1f2">
+    <title>Mentora</title>
+    <link rel="icon" href="mentora.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        /* Additional Styles */
+        body {
+            background: linear-gradient(135deg, #2a2a40, #4b4b72);
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: #fff;
+            margin: 0;
+            animation: fadeIn 3s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: #ddd;
+            margin-top: 20px;
+            animation: fadeIn 5s ease-out;
+        }
+
+        .hero img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            opacity: 0.1;
+            width: 50%;
+            transform: rotate(15deg);
+            animation: slideIn 10s ease-out infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%) rotate(15deg); }
+            to { transform: translateX(0) rotate(15deg); }
+        }
+
+        .cta-button {
+            background: #88e1f2;
+            color: #2a2a40;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #2a2a40;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+    .typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #fff; /* Cursor */
+    animation: typing 1.5s steps(40, end), blink .75s step-end infinite; /* Faster typing */
+}
+
+        @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+        @keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
+    </style>
 </head>
 <body>
     <header>
@@ -16,92 +128,23 @@
             <input type="text" id="searchInput" placeholder="Search...">
         </div>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#lessons">Lessons</a>
-            <a href="#resources">Resources</a>
-            <a href="#contact">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="lessons.html">Lessons</a>
+            <a href="exos.html">Exercices</a>
+            <a href="ressources.html">Resources</a>
+            <a href="book.html">Livres</a>
         </nav>
     </header>
-    <div class="container">
-        <div class="sidebar">
-            <a href="#lesson1" class="active">Limites et Continuité</a>
-            <a href="#lesson2">Les suites numériques</a>
-            <a href="#lesson3">Dérivation et étude des fonctions</a>
-            <a href="#lesson4">Les primitives et calcul intégral</a>
-            <a href="#lesson5">Logarithme népérien</a>
-            <a href="#lesson6">Exponentielle Népérienne</a>
-            <a href="#lesson7">Arithmétique des entiers</a>
-            <a href="#lesson8">Les nombres complexes</a>
-            <a href="#lesson9">Les équations différentielles</a>
-            <a href="#lesson10">Le calcul de probabilités</a>
-            <a href="#lesson11">Les structures algébriques</a>
-            <a href="#lesson12">Les espaces vectoriels</a>
-            <!-- Add more lessons as needed -->
+
+    <div class="hero">
+        <div>
+            <h1><span class="typing">Welcome to Mentora</span></h1>
+            <p>Le meilleur accompagnement pour les eleves de 2bac sm.</p>
+            <a href="https://mentora-maths.github.io/index.html" class="cta-button">Get Started</a>
         </div>
-        <div class="content">
-            <section id="lesson1" class="lesson-card">
-                <h3>Limites et Continuité</h3>
-                <p>Introduction aux limites et la notion de continuité des fonctions.</p>
-                <a href="https://drive.google.com/example">Download PDF</a>
-            </section>
-            <section id="lesson2" class="lesson-card">
-                <h3>Les suites numériques</h3>
-                <p>Etude des suites numériques et leurs propriétés.</p>
-                <a href="https://drive.google.com/example">Download PDF</a>
-            </section>
-            <section id="lesson3" class="lesson-card">
-                <h3>Dérivation et étude des fonctions</h3>
-                <p>Concepts de dérivation et analyse des fonctions.</p>
-                <a href="https://drive.google.com/example">Download PDF</a>
-            </section>
-            <section id="lesson4" class="lesson-card">
-                <h3>Les primitives et calcul intégral</h3>
-                <p>Introduction aux primitives et aux calculs intégrals.</p>
-                <a href="https://drive.google.com/example">Download PDF</a>
-            </section>
-            <section id="lesson5" class="lesson-card">
-                <h3>Logarithme népérien</h3>
-                <p>Étude du logarithme népérien et ses applications.</p>
-                <a href="https://drive.google.com/example">Download PDF</a>
-            </section>
-            <section id="lesson6" class="lesson-card">
-                <h3>Exponentielle Népérienne</h3>
-                <p>Analyse de la fonction exponentielle népérienne.</p>
-                <a href="https://drive.google.com/example">Download PDF</a>
-            </section>
-            <section id="lesson7" class="lesson-card">
-                <h3>Arithmétique des entiers</h3>
-                <p>Principes et théories de l'arithmétique des entiers.</p>
-                <a href="https://drive.google.com/example">Download PDF</a>
-            </section>
-            <section id="lesson8" class="lesson-card">
-                <h3>Les nombres complexes</h3>
-                <p>Introduction aux nombres complexes et leurs propriétés.</p>
-                <a href="https://drive.google.com/example">Download PDF</a>
-            </section>
-            <section id="lesson9" class="lesson-card">
-                <h3>Les équations différentielles</h3>
-                <p>Étude des équations différentielles et leurs solutions.</p>
-                <a href="https://drive.google.com/example">Download PDF</a>
-            </section>
-            <section id="lesson10" class="lesson-card">
-                <h3>Le calcul de probabilités</h3>
-                <p>Principes de base du calcul des probabilités.</p>
-                <a href="https://drive.google.com/example">Download PDF</a>
-            </section>
-            <section id="lesson11" class="lesson-card">
-                <h3>Les structures algébriques</h3>
-                <p>Concepts fondamentaux des structures algébriques.</p>
-                <a href="https://drive.google.com/example">Download PDF</a>
-            </section>
-            <section id="lesson12" class="lesson-card">
-                <h3>Les espaces vectoriels</h3>
-                <p>Introduction aux espaces vectoriels et leurs propriétés.</p>
-                <a href="https://drive.google.com/example">Download PDF</a>
-            </section>
-            <!-- Add more content sections as needed -->
-        </div>
+        <img src="logo.png" alt="Hero Background">
     </div>
+
     <footer id="footer">
         <p>&copy; 2024 Mentora. All rights reserved.</p>
         <div class="social-icons">
@@ -110,6 +153,7 @@
             <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
     </footer>
+
     <script>
         document.getElementById('searchInput').addEventListener('input', function() {
             const query = this.value.toLowerCase();
@@ -132,6 +176,10 @@
             } else {
                 footer.classList.remove('visible');
             }
+        });
+
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.sidebar').classList.toggle('active');
         });
     </script>
 </body>
